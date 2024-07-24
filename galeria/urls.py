@@ -3,4 +3,5 @@ from galeria import views
 
 urlpatterns = [
   path('', views.index),
+  path('imagem/', views.imagem),
 ]
