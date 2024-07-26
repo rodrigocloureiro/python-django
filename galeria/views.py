@@ -1,16 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from galeria.models import Fotografia
 
 # Create your views here.
 
-dados = {
-  1: {'nome': 'Nebulosa de Carina', 'legenda': 'webbtelescope.org / NASA / James Webb'},
-  2: {'nome': 'Galáxia NGC 1079', 'legenda': 'nasa.org / NASA / Hubble'},
-}
-
 def index(request):
   # return HttpResponse('<h1>Alura Space</h1><p>Bem-vindo ao espaço Alura!</p>')
-  return render(request, 'galeria/index.html', {'cards': dados})
+  fotografias = Fotografia.objects.all()
+  return render(request, 'galeria/index.html', {'cards': fotografias})
 
 
 def imagem(request):
