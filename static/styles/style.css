@@ -78,7 +78,7 @@ table {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem 0 4rem 0;
+    margin: 1.5rem 1.5rem 4rem 1.5rem;
 }
 
 .cabecalho__busca {
@@ -109,6 +109,7 @@ table {
     height: 24px;
     padding: 10px;
     width: 500px;
+    color: #FFFFFF;
 }
 
 .busca__icone {
