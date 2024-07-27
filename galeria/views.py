@@ -6,7 +6,8 @@ from galeria.models import Fotografia
 
 def index(request):
   # return HttpResponse('<h1>Alura Space</h1><p>Bem-vindo ao espaço Alura!</p>')
-  fotografias = Fotografia.objects.all()
+  # fotografias = Fotografia.objects.all()
+  fotografias = Fotografia.objects.filter(publicada=True)
   return render(request, 'galeria/index.html', {'cards': fotografias})
 
 
