@@ -10,4 +10,6 @@ def login(request):
 
 
 def cadastro(request):
-  return render(request, 'usuarios/cadastro.html')
+  form = forms.CadastroForms()
+  pass_fields = ['password_1', 'password_2']
+  return render(request, 'usuarios/cadastro.html', {'form': form, 'pass_fields': pass_fields})
