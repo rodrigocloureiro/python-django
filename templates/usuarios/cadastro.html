@@ -23,7 +23,7 @@
     <main class="principal">
       {% include 'galeria/partials/_menu-lateral.html' %}
       <section class="galeria" style="margin-left: 5em">
-        <form action="" method="">
+        <form action="{% url 'cadastro' %}" method="post">
           {% csrf_token %}
           <div class="row">
             {% for field in form.visible_fields %}
