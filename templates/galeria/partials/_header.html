@@ -1,12 +1,19 @@
 {% load static %}
 <header class="cabecalho">
   <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
-  <div class="cabecalho__busca">
-    <form action="{% url 'buscar' %}" class="busca__fundo">
-      <input class="busca__input" type="text" name="busca" placeholder="O que você procura?">
-      <button type="submit" class="busca__button">
-        <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %%}" alt="ícone de search">
-      </button>
-    </form>
+  <div class="cabecalho__actions">
+    <div class="cabecalho__busca">
+      <form action="{% url 'buscar' %}" class="busca__fundo">
+        <input class="busca__input" type="text" name="busca" placeholder="O que você procura?">
+        <button type="submit" class="busca__button">
+          <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %%}" alt="ícone de search">
+        </button>
+      </form>
+    </div>
+    <div class="cabecalho__buttons">
+      <a href="{% url 'login' %}">Entrar</a>
+      <div class="divisor"></div>
+      <a href="{% url 'cadastro' %}">Cadastre-se</a>
+    </div>
   </div>
 </header>

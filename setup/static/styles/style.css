@@ -92,6 +92,33 @@ table {
     width: auto; 
 }
 
+.cabecalho__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 15px;
+
+    .cabecalho__buttons {
+        a {
+            font-weight: 500;
+            color: #7B78E5;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .divisor {
+            margin: 0 5px;
+            display: inline-block;
+            background-color: #7B78E5;
+            width: 1.5px;
+            height: 15px;
+        }
+    }
+}
+
 .busca__fundo {
     align-items: center;
     background-color: #041A37;
