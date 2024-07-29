@@ -1,12 +1,33 @@
 from django.shortcuts import render, redirect
 from usuarios import forms
 from django.contrib.auth.models import User
+from django.contrib import auth
 
 # Create your views here.
 
 
 def login(request):
   form = forms.LoginForms()
+
+  if request.method == 'POST':
+    form = forms.LoginForms(request.POST)
+
+    if form.is_valid():
+      nome = form['nome_login'].value()
+      senha = form['password'].value()
+
+      usuario = auth.authenticate(
+        request,
+        username=nome,
+        password=senha,
+      )
+
+      if usuario is not None:
+        auth.login(request, usuario)
+        return redirect(to='index')
+      else:
+        return redirect(to='login')
+
   return render(request, 'usuarios/login.html', {'form' : form})
 
 
