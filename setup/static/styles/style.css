@@ -419,3 +419,15 @@ table {
     border: 2px solid #7B78E5;
     cursor: pointer;
 }
+
+.error__message {
+    color: #FF0000;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.success__message {
+    color: #00ff40;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
