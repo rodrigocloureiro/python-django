@@ -7,6 +7,9 @@ from django.contrib import auth, messages
 
 
 def login(request):
+  if request.user.is_authenticated:
+    return redirect(to='index')
+
   form = forms.LoginForms()
 
   if request.method == 'POST':
