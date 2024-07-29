@@ -11,11 +11,13 @@
       </form>
     </div>
     <div class="cabecalho__buttons">
+      {% if not user.is_authenticated %}
       <a href="{% url 'login' %}">Entrar</a>
       <div class="divisor"></div>
       <a href="{% url 'cadastro' %}">Cadastre-se</a>
-      <div class="divisor"></div>
+      {% else %}
       <a href="{% url 'logout' %}">Sair</a>
+      {% endif %}
     </div>
   </div>
 </header>
