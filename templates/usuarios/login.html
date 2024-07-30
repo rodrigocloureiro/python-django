@@ -18,10 +18,10 @@
 </head>
 
 <body>
-  {% include 'galeria/partials/_header.html' %}
+  {% include 'partials/_header.html' %}
   <div class="pagina-inicial">
     <main class="principal">
-      {% include 'galeria/partials/_menu-lateral.html' %}
+      {% include 'partials/_menu-lateral.html' %}
       <section class="galeria" style="margin-left: 5em">
         <form action="{% url 'login' %}" method="post">
           {% csrf_token %}
@@ -32,7 +32,7 @@
               {{ field }}
             </div>
             {% endfor %}
-            {% include 'galeria/partials/_alertas.html' %}
+            {% include 'partials/_alertas.html' %}
             <div class="col-12 text-center">
               <button class="btn btn-success col-12" style="padding: 5px;" type="submit">Login</button>
             </div>
@@ -43,4 +43,4 @@
   </div>
 </body>
 
-{% include 'galeria/partials/_footer.html' %}
+{% include 'partials/_footer.html' %}
