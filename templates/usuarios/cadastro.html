@@ -37,9 +37,7 @@
             </div>
             {% endfor %}
             {% endfor %}
-            <!-- {% for message in messages %}
-            <div class="{% if message.tags == 'error' %} error__message {% else %} success__message {% endif %}">{{ message }}</div>
-            {% endfor %} -->
+            {% include 'galeria/partials/_alertas.html' %}
             <div class="col-12 text-center">
               <button class="btn btn-success col-12" style="padding: 5px;" type="submit">Criar sua conta</button>
             </div>
